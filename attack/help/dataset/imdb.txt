@@ -1,0 +1,34 @@
+
+Reusing dataset imdb (/home/h/.cache/huggingface/datasets/imdb/plain_text/1.0.0/e3c66f1788a67a89c7058d97ff62b6c30531e05b549de56d3ab91891f0561f9a)
+textattack: Loading [94mdatasets[0m dataset [94mimdb[0m, split [94mtrain[0m.
+textattack: Number of samples: [94m25000[0m
+textattack: Number of words per input:
+textattack: 	total:   [94m5893057[0m
+textattack: 	mean:    [94m235.72[0m
+textattack: 	std:     [94m174.78[0m
+textattack: 	min:     [94m10[0m
+textattack: 	max:     [94m2479[0m
+textattack: Dataset lowercased: [94mFalse[0m
+textattack: First sample:
+textattack: Last sample:
+textattack: Found 2 distinct outputs.
+textattack: Most common outputs:
+
+
+
+
+
+
+ ==== CUSTOM BERT MODEL ==== 
+
+
+
+
+
+
+Bromwell High is a cartoon comedy. It ran at the same time as some other programs about school life, such as "Teachers". My 35 years in the teaching profession lead me to believe that Bromwell High's satire is much closer to reality than is "Teachers". The scramble to survive financially, the insightful students who can see right through their pathetic teachers' pomp, the pettiness of the whole situation, all remind me of the schools I knew and their students. When I saw the episode in which a student repeatedly tried to burn down the school, I immediately recalled ......... at .......... High. A classic line: INSPECTOR: I'm here to sack one of your teachers. STUDENT: Welcome to Bromwell High. I expect that many adults of my age think that Bromwell High is far fetched. What a pity that it isn't! 
+
+This is one of the dumbest films, I've ever seen. It rips off nearly ever type of thriller and manages to make a mess of them all.<br /><br />There's not a single good line or character in the whole mess. If there was a plot, it was an afterthought and as far as acting goes, there's nothing good to say so Ill say nothing. I honestly cant understand how this type of nonsense gets produced and actually released, does somebody somewhere not at some stage think, 'Oh my god this really is a load of shite' and call it a day. Its crap like this that has people downloading illegally, the trailer looks like a completely different film, at least if you have download it, you haven't wasted your time or money Don't waste your time, this is painful. 
+
+	 1      (12500)
+	 0      (12500)

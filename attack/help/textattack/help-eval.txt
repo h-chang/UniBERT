@@ -1,0 +1,76 @@
+usage: [python -m] texattack <command> [<args>] eval [-h]
+                                                     [--model MODEL | --model-from-file MODEL_FROM_FILE | --model-from-huggingface MODEL_FROM_HUGGINGFACE]
+                                                     [--dataset-by-model DATASET_BY_MODEL | --dataset-from-huggingface DATASET_FROM_HUGGINGFACE | --dataset-from-file DATASET_FROM_FILE]
+                                                     [--dataset-split DATASET_SPLIT]
+                                                     [--filter-by-labels FILTER_BY_LABELS [FILTER_BY_LABELS ...]]
+                                                     [--random-seed RANDOM_SEED]
+                                                     [--batch-size BATCH_SIZE]
+                                                     [--num-examples NUM_EXAMPLES]
+                                                     [--num-examples-offset NUM_EXAMPLES_OFFSET]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --model MODEL         Name of or path to a pre-trained TextAttack model to
+                        load. Choices: ['bert-base-uncased', 'bert-base-
+                        uncased-ag-news', 'bert-base-uncased-cola', 'bert-
+                        base-uncased-imdb', 'bert-base-uncased-mnli', 'bert-
+                        base-uncased-mrpc', 'bert-base-uncased-qnli', 'bert-
+                        base-uncased-qqp', 'bert-base-uncased-rte', 'bert-
+                        base-uncased-sst2', 'bert-base-uncased-stsb', 'bert-
+                        base-uncased-wnli', 'bert-base-uncased-mr', 'bert-
+                        base-uncased-snli', 'bert-base-uncased-yelp',
+                        'distilbert-base-uncased', 'distilbert-base-cased-
+                        cola', 'distilbert-base-cased-mrpc', 'distilbert-base-
+                        cased-qqp', 'distilbert-base-cased-snli', 'distilbert-
+                        base-cased-sst2', 'distilbert-base-cased-stsb',
+                        'distilbert-base-uncased-ag-news', 'distilbert-base-
+                        uncased-cola', 'distilbert-base-uncased-imdb',
+                        'distilbert-base-uncased-mnli', 'distilbert-base-
+                        uncased-mr', 'distilbert-base-uncased-mrpc',
+                        'distilbert-base-uncased-qnli', 'distilbert-base-
+                        uncased-rte', 'distilbert-base-uncased-wnli',
+                        'roberta-base', 'roberta-base-ag-news', 'roberta-base-
+                        cola', 'roberta-base-imdb', 'roberta-base-mr',
+                        'roberta-base-mrpc', 'roberta-base-qnli', 'roberta-
+                        base-rte', 'roberta-base-sst2', 'roberta-base-stsb',
+                        'roberta-base-wnli', 'albert-base-v2', 'albert-
+                        base-v2-ag-news', 'albert-base-v2-cola', 'albert-
+                        base-v2-imdb', 'albert-base-v2-mr', 'albert-
+                        base-v2-rte', 'albert-base-v2-qqp', 'albert-
+                        base-v2-snli', 'albert-base-v2-sst2', 'albert-
+                        base-v2-stsb', 'albert-base-v2-wnli', 'albert-
+                        base-v2-yelp', 'xlnet-base-cased', 'xlnet-base-cased-
+                        cola', 'xlnet-base-cased-imdb', 'xlnet-base-cased-mr',
+                        'xlnet-base-cased-mrpc', 'xlnet-base-cased-rte',
+                        'xlnet-base-cased-stsb', 'xlnet-base-cased-wnli',
+                        'lstm-ag-news', 'lstm-imdb', 'lstm-mr', 'lstm-sst2',
+                        'lstm-yelp', 'cnn-ag-news', 'cnn-imdb', 'cnn-mr',
+                        'cnn-sst2', 'cnn-yelp', 't5-en-de', 't5-en-fr',
+                        't5-en-ro', 't5-summarization'] (default: None)
+  --model-from-file MODEL_FROM_FILE
+                        File of model and tokenizer to import. (default: None)
+  --model-from-huggingface MODEL_FROM_HUGGINGFACE
+                        Name of or path of pre-trained HuggingFace model to
+                        load. (default: None)
+  --dataset-by-model DATASET_BY_MODEL
+                        Dataset to load depending on the name of the model
+                        (default: None)
+  --dataset-from-huggingface DATASET_FROM_HUGGINGFACE
+                        Dataset to load from `datasets` repository. (default:
+                        None)
+  --dataset-from-file DATASET_FROM_FILE
+                        Dataset to load from a file. (default: None)
+  --dataset-split DATASET_SPLIT
+                        Split of dataset to use when specifying --dataset-by-
+                        model or --dataset-from-huggingface. (default: None)
+  --filter-by-labels FILTER_BY_LABELS [FILTER_BY_LABELS ...]
+                        List of labels to keep in the dataset and discard all
+                        others. (default: None)
+  --random-seed RANDOM_SEED
+  --batch-size BATCH_SIZE
+                        The batch size for evaluating the model. (default: 32)
+  --num-examples NUM_EXAMPLES, -n NUM_EXAMPLES
+                        The number of examples to process, -1 for entire
+                        dataset (default: 5)
+  --num-examples-offset NUM_EXAMPLES_OFFSET, -o NUM_EXAMPLES_OFFSET
+                        The offset to start at in the dataset. (default: 0)

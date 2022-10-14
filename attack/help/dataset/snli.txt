@@ -1,0 +1,38 @@
+
+Reusing dataset snli (/home/h/.cache/huggingface/datasets/snli/plain_text/1.0.0/1f60b67533b65ae0275561ff7828aad5ee4282d0e6f844fd148d05d3c6ea251b)
+textattack: Loading [94mdatasets[0m dataset [94msnli[0m, split [94mtrain[0m.
+textattack: Number of samples: [94m550152[0m
+textattack: Number of words per input:
+textattack: 	total:   [94m11150480[0m
+textattack: 	mean:    [94m20.27[0m
+textattack: 	std:     [94m6.95[0m
+textattack: 	min:     [94m4[0m
+textattack: 	max:     [94m112[0m
+textattack: Dataset lowercased: [94mFalse[0m
+textattack: First sample:
+textattack: Last sample:
+textattack: Found 4 distinct outputs.
+textattack: Most common outputs:
+
+
+
+
+
+
+ ==== CUSTOM BERT MODEL ==== 
+
+
+
+
+
+
+Premise: A person on a horse jumps over a broken down airplane.
+Hypothesis: A person is training his horse for a competition. 
+
+Premise: A man is surfing in a bodysuit in beautiful blue water.
+Hypothesis: On the beautiful blue water there is a man in a bodysuit surfing. 
+
+	 0      (183416)
+	 2      (183187)
+	 1      (182764)
+	 -1     (785)

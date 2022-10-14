@@ -1,0 +1,22 @@
+usage: [python -m] texattack <command> [<args>] peek-dataset
+       [-h]
+       [--dataset-by-model DATASET_BY_MODEL | --dataset-from-huggingface DATASET_FROM_HUGGINGFACE | --dataset-from-file DATASET_FROM_FILE]
+       [--dataset-split DATASET_SPLIT]
+       [--filter-by-labels FILTER_BY_LABELS [FILTER_BY_LABELS ...]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --dataset-by-model DATASET_BY_MODEL
+                        Dataset to load depending on the name of the model
+                        (default: None)
+*  --dataset-from-huggingface DATASET_FROM_HUGGINGFACE
+                        Dataset to load from `datasets` repository. (default:
+                        None)
+  --dataset-from-file DATASET_FROM_FILE
+                        Dataset to load from a file. (default: None)
+  --dataset-split DATASET_SPLIT
+                        Split of dataset to use when specifying --dataset-by-
+                        model or --dataset-from-huggingface. (default: None)
+  --filter-by-labels FILTER_BY_LABELS [FILTER_BY_LABELS ...]
+                        List of labels to keep in the dataset and discard all
+                        others. (default: None)

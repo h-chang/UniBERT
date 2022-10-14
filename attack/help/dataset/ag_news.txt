@@ -1,0 +1,37 @@
+
+Using custom data configuration default
+Reusing dataset ag_news (/home/h/.cache/huggingface/datasets/ag_news/default/0.0.0/bc2bcb40336ace1a0374767fc29bb0296cdaf8a6da7298436239c54d79180548)
+textattack: Loading [94mdatasets[0m dataset [94mag_news[0m, split [94mtrain[0m.
+textattack: Number of samples: [94m120000[0m
+textattack: Number of words per input:
+textattack: 	total:   [94m4653536[0m
+textattack: 	mean:    [94m38.78[0m
+textattack: 	std:     [94m11.18[0m
+textattack: 	min:     [94m11[0m
+textattack: 	max:     [94m178[0m
+textattack: Dataset lowercased: [94mFalse[0m
+textattack: First sample:
+textattack: Last sample:
+textattack: Found 4 distinct outputs.
+textattack: Most common outputs:
+
+
+
+
+
+
+ ==== CUSTOM BERT MODEL ==== 
+
+
+
+
+
+
+Wall St. Bears Claw Back Into the Black (Reuters) Reuters - Short-sellers, Wall Street's dwindling\band of ultra-cynics, are seeing green again. 
+
+Nets get Carter from Raptors INDIANAPOLIS -- All-Star Vince Carter was traded by the Toronto Raptors to the New Jersey Nets for Alonzo Mourning, Eric Williams, Aaron Williams, and a pair of first-round draft picks yesterday. 
+
+	 2      (30000)
+	 3      (30000)
+	 1      (30000)
+	 0      (30000)

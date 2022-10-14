@@ -1,0 +1,144 @@
+usage: [python -m] texattack <command> [<args>] train [-h]
+                                                      --model-name-or-path
+                                                      MODEL_NAME_OR_PATH
+                                                      [--model-max-length MODEL_MAX_LENGTH]
+                                                      [--model-num-labels MODEL_NUM_LABELS]
+                                                      [--attack ATTACK]
+                                                      [--task-type TASK_TYPE]
+                                                      --dataset DATASET
+                                                      [--dataset-train-split DATASET_TRAIN_SPLIT]
+                                                      [--dataset-eval-split DATASET_EVAL_SPLIT]
+                                                      [--filter-train-by-labels FILTER_TRAIN_BY_LABELS [FILTER_TRAIN_BY_LABELS ...]]
+                                                      [--filter-eval-by-labels FILTER_EVAL_BY_LABELS [FILTER_EVAL_BY_LABELS ...]]
+                                                      [--num-epochs NUM_EPOCHS]
+                                                      [--num-clean-epochs NUM_CLEAN_EPOCHS]
+                                                      [--attack-epoch-interval ATTACK_EPOCH_INTERVAL]
+                                                      [--early-stopping-epochs EARLY_STOPPING_EPOCHS]
+                                                      [--learning-rate LEARNING_RATE]
+                                                      [--num-warmup-steps NUM_WARMUP_STEPS]
+                                                      [--weight-decay WEIGHT_DECAY]
+                                                      [--per-device-train-batch-size PER_DEVICE_TRAIN_BATCH_SIZE]
+                                                      [--per-device-eval-batch-size PER_DEVICE_EVAL_BATCH_SIZE]
+                                                      [--gradient-accumulation-steps GRADIENT_ACCUMULATION_STEPS]
+                                                      [--random-seed RANDOM_SEED]
+                                                      [--parallel]
+                                                      [--load-best-model-at-end]
+                                                      [--alpha ALPHA]
+                                                      [--num-train-adv-examples NUM_TRAIN_ADV_EXAMPLES]
+                                                      [--query-budget-train QUERY_BUDGET_TRAIN]
+                                                      [--attack-num-workers-per-device ATTACK_NUM_WORKERS_PER_DEVICE]
+                                                      [--output-dir OUTPUT_DIR]
+                                                      [--checkpoint-interval-steps CHECKPOINT_INTERVAL_STEPS]
+                                                      [--checkpoint-interval-epochs CHECKPOINT_INTERVAL_EPOCHS]
+                                                      [--save-last]
+                                                      [--log-to-tb]
+                                                      [--tb-log-dir TB_LOG_DIR]
+                                                      [--log-to-wandb]
+                                                      [--wandb-project WANDB_PROJECT]
+                                                      [--logging-interval-step LOGGING_INTERVAL_STEP]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --model-name-or-path MODEL_NAME_OR_PATH, --model MODEL_NAME_OR_PATH
+                        Name or path of the model we want to create. "lstm"
+                        and "cnn" will create TextAttack's LSTM and CNN models
+                        while any other input will be used to create
+                        Transformers model. (e.g."brt-base-uncased").
+                        (default: None)
+*  --model-max-length MODEL_MAX_LENGTH
+                        The maximum sequence length of the model. (default:
+                        None)
+*  --model-num-labels MODEL_NUM_LABELS
+                        The number of labels for classification. (default:
+                        None)
+  --attack ATTACK       Attack recipe to use (enables adversarial training)
+                        (default: None)
+  --task-type TASK_TYPE
+                        Type of task model is supposed to perform. Options:
+                        `classification`, `regression`. (default:
+                        classification)
+*  --dataset DATASET     dataset for training; will be loaded from `datasets`
+                        library. if dataset has a subset, separate with a
+                        colon. ex: `glue^sst2` or `rotten_tomatoes` (default:
+                        yelp)
+  --dataset-train-split DATASET_TRAIN_SPLIT
+                        train dataset split, if non-standard (can
+                        automatically detect 'train' (default: )
+  --dataset-eval-split DATASET_EVAL_SPLIT
+                        val dataset split, if non-standard (can automatically
+                        detect 'dev', 'validation', 'eval') (default: )
+*  --filter-train-by-labels FILTER_TRAIN_BY_LABELS [FILTER_TRAIN_BY_LABELS ...]
+                        List of labels to keep in the train dataset and
+                        discard all others. (default: None)
+*  --filter-eval-by-labels FILTER_EVAL_BY_LABELS [FILTER_EVAL_BY_LABELS ...]
+                        List of labels to keep in the eval dataset and discard
+                        all others. (default: None)
+*  --num-epochs NUM_EPOCHS, --epochs NUM_EPOCHS
+                        Total number of epochs for training. (default: 3)
+  --num-clean-epochs NUM_CLEAN_EPOCHS
+                        Number of epochs to train on the clean dataset before
+                        adversarial training (N/A if --attack unspecified)
+                        (default: 1)
+  --attack-epoch-interval ATTACK_EPOCH_INTERVAL
+                        Generate a new adversarial training set every N
+                        epochs. (default: 1)
+  --early-stopping-epochs EARLY_STOPPING_EPOCHS
+                        Number of epochs validation must increase before
+                        stopping early (-1 for no early stopping) (default:
+                        None)
+  --learning-rate LEARNING_RATE, --lr LEARNING_RATE
+                        Learning rate for Adam Optimization. (default: 5e-05)
+  --num-warmup-steps NUM_WARMUP_STEPS
+                        The number of steps for the warmup phase of linear
+                        scheduler. (default: 500)
+  --weight-decay WEIGHT_DECAY
+                        Weight decay (L2 penalty). (default: 0.01)
+  --per-device-train-batch-size PER_DEVICE_TRAIN_BATCH_SIZE
+                        The batch size per GPU/CPU for training. (default: 8)
+  --per-device-eval-batch-size PER_DEVICE_EVAL_BATCH_SIZE
+                        The batch size per GPU/CPU for evaluation. (default:
+                        32)
+  --gradient-accumulation-steps GRADIENT_ACCUMULATION_STEPS
+                        Number of updates steps to accumulate the gradients
+                        for, before performing a backward/update pass.
+                        (default: 1)
+  --random-seed RANDOM_SEED
+                        Random seed. (default: 786)
+  --parallel            If set, run training on multiple GPUs. (default:
+                        False)
+  --load-best-model-at-end
+                        If set, keep track of the best model across training
+                        and load it at the end. (default: False)
+  --alpha ALPHA         The weight of adversarial loss. (default: 1.0)
+  --num-train-adv-examples NUM_TRAIN_ADV_EXAMPLES
+                        The number of samples to attack when generating
+                        adversarial training set. Default is -1 (which is all
+                        possible samples). (default: -1)
+  --query-budget-train QUERY_BUDGET_TRAIN
+                        The max query budget to use when generating
+                        adversarial training set. (default: None)
+  --attack-num-workers-per-device ATTACK_NUM_WORKERS_PER_DEVICE
+                        Number of worker processes to run per device for
+                        attack. Same as `num_workers_per_device` argument for
+                        `AttackArgs`. (default: 1)
+  --output-dir OUTPUT_DIR
+                        Directory to output training logs and checkpoints.
+                        (default: ./outputs/2021-09-30-14-29-48-827291)
+  --checkpoint-interval-steps CHECKPOINT_INTERVAL_STEPS
+                        Save model checkpoint after every N updates to the
+                        model. (default: None)
+  --checkpoint-interval-epochs CHECKPOINT_INTERVAL_EPOCHS
+                        Save model checkpoint after every N epochs. (default:
+                        None)
+  --save-last           If set, save the model at end of training. Can be used
+                        with `--load-best-model-at-end` to save the best model
+                        at the end. (default: True)
+  --log-to-tb           If set, log to Tensorboard (default: False)
+  --tb-log-dir TB_LOG_DIR
+                        Path of Tensorboard log directory. (default: None)
+  --log-to-wandb        If set, log to Wandb. (default: False)
+  --wandb-project WANDB_PROJECT
+                        Name of Wandb project for logging. (default:
+                        textattack)
+  --logging-interval-step LOGGING_INTERVAL_STEP
+                        Log to Tensorboard/Wandb every N steps. (default: 1)

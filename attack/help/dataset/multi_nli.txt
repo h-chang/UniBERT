@@ -1,0 +1,38 @@
+
+Using custom data configuration default
+Reusing dataset multi_nli (/home/h/.cache/huggingface/datasets/multi_nli/default/0.0.0/591f72eb6263d1ab527561777936b199b714cda156d35716881158a2bd144f39)
+textattack: Loading [94mdatasets[0m dataset [94mmulti_nli[0m, split [94mtrain[0m.
+textattack: Number of samples: [94m392702[0m
+textattack: Number of words per input:
+textattack: 	total:   [94m11712656[0m
+textattack: 	mean:    [94m29.83[0m
+textattack: 	std:     [94m16.23[0m
+textattack: 	min:     [94m2[0m
+textattack: 	max:     [94m396[0m
+textattack: Dataset lowercased: [94mFalse[0m
+textattack: First sample:
+textattack: Last sample:
+textattack: Found 3 distinct outputs.
+textattack: Most common outputs:
+
+
+
+
+
+
+ ==== CUSTOM BERT MODEL ==== 
+
+
+
+
+
+
+Premise: Conceptually cream skimming has two basic dimensions - product and geography.
+Hypothesis: Product and geography are what make cream skimming work.  
+
+Premise: in that other you know uh that i should do it or that or just to think about doing it rat her than having someone  tell him to do it i know that was a big thing in our house for a long time was that if i wanted my husband to do something to help
+Hypothesis: My husband has been so overworked lately that I can't bring myself to ask him to do much around here. 
+
+	 2      (130903)
+	 1      (130900)
+	 0      (130899)

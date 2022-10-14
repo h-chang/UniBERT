@@ -1,0 +1,35 @@
+
+Using custom data configuration default
+Reusing dataset rotten_tomatoes_movie_review (/home/h/.cache/huggingface/datasets/rotten_tomatoes_movie_review/default/1.0.0/e06abb624abab47e1a64608fdfe65a913f5a68c66118408032644a3285208fb5)
+textattack: Loading [94mdatasets[0m dataset [94mrotten_tomatoes[0m, split [94mtrain[0m.
+textattack: Number of samples: [94m8530[0m
+textattack: Number of words per input:
+textattack: 	total:   [94m157755[0m
+textattack: 	mean:    [94m18.49[0m
+textattack: 	std:     [94m8.58[0m
+textattack: 	min:     [94m1[0m
+textattack: 	max:     [94m51[0m
+textattack: Dataset lowercased: [94mTrue[0m
+textattack: First sample:
+textattack: Last sample:
+textattack: Found 2 distinct outputs.
+textattack: Most common outputs:
+
+
+
+
+
+
+ ==== CUSTOM BERT MODEL ==== 
+
+
+
+
+
+
+the rock is destined to be the 21st century's new " conan " and that he's going to make a splash even greater than arnold schwarzenegger , jean-claud van damme or steven segal . 
+
+things really get weird , though not particularly scary : the movie is all portent and no content . 
+
+	 1      (4265)
+	 0      (4265)

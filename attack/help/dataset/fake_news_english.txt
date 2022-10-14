@@ -1,0 +1,31 @@
+
+Using custom data configuration default
+Reusing dataset fake_news_english (/home/h/.cache/huggingface/datasets/fake_news_english/default/1.1.0/afe4d5bc6a17e4e24a3f8b67d696ef717cb09d582419ad971de4c2c4c678bada)
+textattack: Loading [94mdatasets[0m dataset [94mfake_news_english[0m, split [94mtrain[0m.
+
+
+
+
+
+
+ ==== CUSTOM BERT MODEL ==== 
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "/home/h/dev/env/anaconda3/envs/textattack/bin/textattack", line 33, in <module>
+    sys.exit(load_entry_point('textattack', 'console_scripts', 'textattack')())
+  File "/home/h/dev/pathfind/TextAttack/textattack/commands/textattack_cli.py", line 42, in main
+    func.run(args)
+  File "/home/h/dev/pathfind/TextAttack/textattack/commands/peek_dataset_command.py", line 28, in run
+    dataset = textattack.DatasetArgs._create_dataset_from_args(dataset_args)
+  File "/home/h/dev/pathfind/TextAttack/textattack/dataset_args.py", line 287, in _create_dataset_from_args
+    dataset = textattack.datasets.HuggingFaceDataset(
+  File "/home/h/dev/pathfind/TextAttack/textattack/datasets/huggingface_dataset.py", line 112, in __init__
+    ) = dataset_columns or get_datasets_dataset_columns(self._dataset)
+  File "/home/h/dev/pathfind/TextAttack/textattack/datasets/huggingface_dataset.py", line 49, in get_datasets_dataset_columns
+    raise ValueError(
+ValueError: Unsupported dataset schema {'url_of_article', 'article_number', 'fake_or_satire', 'url_of_rebutting_article'}. Try passing your own `dataset_columns` argument.
